@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter } from '@angular/core';
 import { Item } from '../data';
 
 @Component({
@@ -8,25 +8,29 @@ import { Item } from '../data';
 })
 export class ProductItemComponent implements OnInit {
 
-  itemList: Item[] = [];
+  @Input() item: Item;
 
-  constructor() { }
+  quantity: number = 0;
+
+  constructor() { 
+    
+    //initialize constructor in order to input the item from parent
+    this.item = {
+      name: '',
+      price: 0
+    }
+  }
 
   ngOnInit(): void {
-    this.itemList = [
-      {
-        name: 'Backpack',
-        price: 50
-      },
-      {
-        name: 'headphones',
-        price: 259.99
-      },
-      {
-        name: 'Jeans',
-        price: 89
-      }
-    ]
+   
+  }
+
+  add(): void {
+    this.quantity += 1
+  }
+
+  remove(): void {
+    this.quantity -= 1
   }
 
 }

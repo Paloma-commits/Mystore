@@ -1,4 +1,4 @@
 <h1>List of Articles</h1>
 
-<app-product-item></app-product-item>
+<app-product-item *ngFor= "let item of items" [item] = "item" ></app-product-item>
 

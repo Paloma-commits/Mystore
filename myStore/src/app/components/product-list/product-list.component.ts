@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductItemComponent } from '../product-item/product-item.component';
+import { Item } from '../data';
 
 @Component({
   selector: 'app-product-list',
@@ -8,12 +9,23 @@ import { ProductItemComponent } from '../product-item/product-item.component';
 })
 export class ProductListComponent implements OnInit {
 
-  //@Input() product;
+  items: Item[] = [{ name: '', price: 0}];
 
   
   constructor() { }
 
   ngOnInit(): void {
+
+    this.items = [
+      {
+        name: 'backpack',
+        price: 89
+      },
+      {
+        name: 'headphones',
+        price: 259
+      }
+    ]
   }
 
 

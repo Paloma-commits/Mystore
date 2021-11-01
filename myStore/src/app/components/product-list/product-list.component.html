@@ -1,4 +1,7 @@
 <h1>List of Articles</h1>
+<div fxLayout="row" fxLayoutAlign="space-between">
+    <app-product-item *ngFor= "let item of items" [item] = "item" ></app-product-item>
+</div>
 
-<app-product-item *ngFor= "let item of items" [item] = "item" ></app-product-item>
+
 

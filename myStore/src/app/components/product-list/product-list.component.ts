@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductItemComponent } from '../product-item/product-item.component';
 import { Item } from '../data';
+import { FetchItemsService } from 'src/app/services/fetch-items.service';
 
 @Component({
   selector: 'app-product-list',
@@ -12,21 +13,14 @@ export class ProductListComponent implements OnInit {
   items: Item[] = [{ name: '', price: 0}];
 
   
-  constructor() { }
+  constructor(private FetchItemservice: FetchItemsService) { }
 
   ngOnInit(): void {
 
-    this.items = [
-      {
-        name: 'backpack',
-        price: 89
-      },
-      {
-        name: 'headphones',
-        price: 259
-      }
-    ]
-  }
+    this.FetchItemservice.getItems().subscribe(res => {
 
+    });
+
+  }
 
 }

@@ -1,4 +1,12 @@
-<h3>{{ item.name }}</h3>
-<h3>{{ item.price }}</h3>
-<button (click)="add()">Add</button>
-<button (click)="remove()">Remove</button>
+<div class='product-container'>
+    <img class="product-image" src="assets/pictures/{{item.image}}" alt={{item.name}}>
+    <h3>{{ item.name }}</h3>
+    <h3>${{ item.price }}</h3>
+    <label for="quantity">Quantity</label>
+    <select id="quantity" name="quantity">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+    <button (click)="remove()">Add to Cart</button>
+</div>

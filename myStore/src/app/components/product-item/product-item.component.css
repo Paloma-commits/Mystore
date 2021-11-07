@@ -1,6 +1,7 @@
 .product-image {      
   list-style-type: none;
   width: 290px;
+  height: 280px;
   padding: 20px;
   margin: 6px 6px;        
   border: 1px solid #33B5E5;
@@ -16,6 +17,19 @@
 }
   
 .select-input {
-  width: 108px; 
+  width: 500px; 
   margin-bottom: 8px;
+  align-items: center;
+}
+
+
+button{
+  background-color: #008CBA;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 10%;
 }

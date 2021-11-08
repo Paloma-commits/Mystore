@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Item } from '../components/data';
+import { Item } from './models/item';
 import {HttpClient} from '@angular/common/http';
 
 @Injectable({
@@ -8,10 +8,12 @@ import {HttpClient} from '@angular/common/http';
 })
 export class FetchItemsService {
 
+  private data:string = "../assets/data.json"
+
   constructor(private http: HttpClient) { }
 
-  getItems(): Observable <[]> {
-    return this.http.get<[]> ("https://jsonplaceholder.typicode.com/photos?_limit=8") 
+  getItems(): Observable <Item[]> {
+    return this.http.get<Item[]> (this.data) 
 
   }
 }

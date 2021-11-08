@@ -10,8 +10,6 @@ export class ConfirmationComponent implements OnInit {
   @Input() name:string;
   
 
-
-
   constructor() { 
     this.name = '';
   }

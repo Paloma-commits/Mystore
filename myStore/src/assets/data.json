@@ -1,0 +1,32 @@
+[
+    {
+        "image": "backpack.jpg",
+        "name": "backpack",
+        "price": 65
+      },
+      {
+        "image": "headphones.jpg",
+        "name": "headphones",
+        "price": 359
+      },
+      {
+        "image": "waterbottle.jpg",
+        "name": "waterbottle",
+        "price": 25.99
+      },
+      {
+        "image": "sunglasses.jpg",
+        "name": "sunglasses",
+        "price": 140
+      },
+      {
+        "image": "sunscreen.jpg",
+        "name": "sunscreen",
+        "price": 12
+      },
+      {
+        "image": "watch.jpg",
+        "name": "watch",
+        "price": 200
+      } 
+]

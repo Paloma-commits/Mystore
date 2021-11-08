@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, EventEmitter } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 import { Item } from '../../services/models/item';
 
 @Component({
@@ -10,15 +11,16 @@ export class ProductItemComponent implements OnInit {
 
   @Input() item: Item;
 
-  quantity: number = 0;
+  quantity: number = 1;
 
-  constructor() { 
+  constructor(private cartService: CartService) { 
     
     //initialize constructor in order to input the item from parent
     this.item = {
       image: '',
       name: '',
-      price: 0
+      price: 0,
+      quantity: 1
     }
   }
 
@@ -26,12 +28,8 @@ export class ProductItemComponent implements OnInit {
    
   }
 
-  add(): void {
-    this.quantity += 1
-  }
-
-  remove(): void {
-    this.quantity -= 1
+  add(item: Item): void {
+    this.cartService.addtoCart(item);
   }
 
 }

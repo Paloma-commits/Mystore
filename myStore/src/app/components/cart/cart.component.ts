@@ -1,5 +1,7 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -12,19 +14,17 @@ export class CartComponent implements OnInit {
   cardnum: string;
 
   constructor() { 
-    this.name='';
-    this.address='';
-    this.cardnum='';
+    this.name = "";
+    this.address= "";
+    this.cardnum= "";
   }
 
   ngOnInit(): void {
   }
 
   onSubmit(): void{
-    alert(`${this.name} has successfully signed in!`)
+    alert()
   }
 
-  // btnClick() {
-  //   this.router.navigateByUrl('/confirmation');
-//};
+
 }

@@ -4,10 +4,10 @@
 <!-- <img class="confirmation-item" src="assets/pictures/emojiparty.jpg"> -->
 
 <div class="confirmation-container">
-    <p>Thank you, {{name}}!</p>
-    <br>
-    <p>Your total order is confirmed!</p>
-    <br>
-    <p>Please allow 1-3 business day(s) for Shipping</p>
-    <button routerLink='/'>Back to product list</button>
+    <div fxLayout="column wrap" fxLayoutAlign="space-between">
+        <p>Thank you, {{currentOrder.name}}!</p>
+        <p>Your total order is confirmed!</p>
+        <p>Please allow 1-3 business day(s) for Shipping</p>
+        <button routerLink='/'>Back to product list</button>
+    </div>
 </div>

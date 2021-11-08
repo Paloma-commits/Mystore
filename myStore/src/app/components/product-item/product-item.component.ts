@@ -11,8 +11,6 @@ export class ProductItemComponent implements OnInit {
 
   @Input() item: Item;
 
-  quantity: number = 1;
-
   constructor(private cartService: CartService) { 
     
     //initialize constructor in order to input the item from parent

@@ -8,7 +8,7 @@ import { HeaderComponent } from './layout/header/header.component';
 const routes: Routes = [
   { path: '', component: ProductListComponent },
   { path: 'cart', component: CartComponent },
-  {path: 'confirmation', component: ConfirmationComponent}
+  {path: 'cart/confirmation', component: ConfirmationComponent}
 ];
 
 @NgModule({

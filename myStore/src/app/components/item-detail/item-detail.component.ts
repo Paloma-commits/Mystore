@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Item } from 'src/app/services/models/item';
 
 
@@ -16,9 +17,13 @@ export class ItemDetailComponent implements OnInit {
     quantity: 1,
   }
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  backHome(){
+    this.router.navigate(['/']);
   }
 
 }

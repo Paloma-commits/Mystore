@@ -18,6 +18,7 @@ button{
     align-self: center;
     margin:auto;
     display: grid;
+    cursor: pointer;
 }
 
 

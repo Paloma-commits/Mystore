@@ -1,11 +1,17 @@
 .product-image {      
   list-style-type: none;
-  width: 290px;
+  width: 280px;
   height: 280px;
   padding: 20px;
   margin: 6px 6px;        
   border: 1px solid #33B5E5;
-  } 
+} 
+
+image{
+  width: 50px;
+  height: 50px;
+
+}
   
 .product-container {
   margin-top: 64px;
@@ -22,14 +28,15 @@
   align-items: center;
 }
 
-
-button{
-  background-color: #008CBA;
+#cart{
+  background-color: #45a049;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 4px;
   color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  border-radius: 10%;
+  align-self: center;
+  margin:auto;
+  display: grid;
+  cursor: pointer;
 }
+

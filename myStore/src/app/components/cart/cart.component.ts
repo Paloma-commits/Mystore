@@ -2,6 +2,8 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { OrderService } from 'src/app/services/order.service';
 import { Order } from 'src/app/services/models/order';
 import { Router } from '@angular/router';
+import { CartService } from 'src/app/services/cart.service';
+import { Item } from 'src/app/services/models/item';
 
 @Component({
   selector: 'app-cart',
@@ -9,6 +11,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+
+  cartList: Item[] = []
 
   name: string = "";
   address: string = "";
@@ -19,18 +23,20 @@ export class CartComponent implements OnInit {
     price: 0
   };
 
-  constructor(private OrderService: OrderService, private router: Router) { 
+  constructor(private OrderService: OrderService, private router: Router, private CartService: CartService) { 
     
   }
 
   ngOnInit(): void {
+    this.cartList = this.CartService.getCart();
+
+
   }
 
-  onSubmit(): void{
-    this.currentOrder.name = this.name;
-    this.OrderService.scheduleOrder(this.currentOrder.name, this.currentOrder.price);
-    this.router.navigate(['cart/confirmation']);
+  checkout() {
+    this.router.navigate(['cart/checkout']);
   }
+  
 
 
 }

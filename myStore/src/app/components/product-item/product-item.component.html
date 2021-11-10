@@ -1,5 +1,5 @@
 <div class='product-container'>
-    <a [routerLink]="['/product/', item.name]"><img class="product-image" src="assets/pictures/{{item.image}}" alt={{item.name}}></a>
+    <a [routerLink]="['/product/', item.id, item.name]"><img class="product-image" src="assets/pictures/{{item.image}}" alt={{item.name}}></a>
     <h3>{{ item.name }}</h3>
     <h3>${{ item.price }}</h3>
     <label for="quantity">Quantity</label>
@@ -11,3 +11,5 @@
     <br>
     <button id="cart" (click)="addProductToCart()">Add to Cart</button>
 </div>
+
+

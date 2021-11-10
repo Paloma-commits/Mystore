@@ -16,6 +16,7 @@ export class ProductItemComponent implements OnInit {
     
     //initialize constructor in order to input the item from parent
     this.item = {
+      id: 0,
       image: '',
       name: '',
       price: 0,

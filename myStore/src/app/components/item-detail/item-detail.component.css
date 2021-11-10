@@ -13,11 +13,14 @@ img {
     justify-content: center;
     align-items: center;
     margin-top: 64px;
+    font-size: x-large;
 }
   
 .detail-item {
     margin-left: 128px;
     margin-right: 128px;
+    height: 300px;
+    width: 300px;
 }
   
 .back-link {

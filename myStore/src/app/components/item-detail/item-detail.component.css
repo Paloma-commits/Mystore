@@ -9,16 +9,26 @@ img {
 }
   
 .detail-container {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     margin-top: 64px;
     font-size: x-large;
+    text-align: center;
 }
   
 .detail-item {
     margin-left: 128px;
     margin-right: 128px;
+    border: 5px solid #5F9EA0;
+    background-color: azure;
+    height: 500px;
+    width:500px;
+    border-radius: 10px;
+}
+
+.product-image{
+    align-self: center;
     height: 300px;
     width: 300px;
 }
@@ -29,4 +39,12 @@ img {
 
 button{
     cursor: pointer;
+    display: flex;
+    align-self: center;
+    position:absolute; 
+    margin-left:-50px;
+    left:50%;
+    width:100px;
+    bottom:30px;
+
 }

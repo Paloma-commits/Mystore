@@ -20,6 +20,7 @@
     row-gap: 10px;
     column-gap: 20px;
     align-content: space-around;
+    border: 1px solid;
 }
 
 .info-text{

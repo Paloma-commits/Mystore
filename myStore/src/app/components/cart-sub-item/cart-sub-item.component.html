@@ -1,34 +1,11 @@
-<!-- <div class="row">
-    <img class="column" src="assets/pictures/{{prod.image}}"
-            alt={{prod.name}}>
-    <h4 class= "column">{{prod.name}} for ${{prod.price}}</h4>
-    <h4 class= "column">Quantity</h4>
-    <button class="column" (click)="remove(prod)">Remove Item</button>
-</div> -->
-
-<!-- <div class="checkout-item">
-    <div class="row">
-        <div class="column">
-            <img id="prod" src="assets/pictures/{{prod.image}}" alt={{prod.name}}>
-        </div>
-        <div class="column">
-            <h4>{{prod.name}} for ${{prod.price}}</h4>
-            <h4>Quantity {{prod.quantity}}</h4>
-        </div>
-    </div>
-    <div class="row">
-        <button (click)="remove(prod)">Remove Item</button>
-    </div>
-</div> -->
-
 <div class="container">
     <div class="image">
         <img id="prod" src="assets/pictures/{{prod.image}}" alt={{prod.name}}>
     </div>
     <div class="info-text">
         <h4>{{prod.name}} for ${{prod.price}}</h4>
-        <h4>Quantity {{prod.quantity}}</h4>
-        <!-- <button (click)="remove(prod)">Remove Item</button> -->
+        <h4>Quantity {{this.quantity}}</h4>
+        <h5>Total for this item: </h5>
     </div>
 </div>
 <button id="button" (click)="remove(prod)">Remove Item</button>

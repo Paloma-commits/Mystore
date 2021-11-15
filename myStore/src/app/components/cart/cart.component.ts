@@ -14,7 +14,7 @@ export class CartComponent implements OnInit {
 
   cartList: Item[] = []
 
-  total = 0;
+  itemstotal = 0;
 
   constructor(private OrderService: OrderService, private router: Router, private CartService: CartService) { 
     
@@ -22,6 +22,7 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartList = this.CartService.getCart();
+    this.itemstotal = this.CartService.calculateTotalCart();
 
 
   }

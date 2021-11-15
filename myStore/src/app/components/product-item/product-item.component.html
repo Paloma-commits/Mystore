@@ -5,16 +5,10 @@
     <h3>${{ item.price }}</h3>
     <h4 style="color:#5F9EA0;">Select the quantity of this item</h4>
     <div class="form-group">
-        <select (click)="addQuantity(quantity)">
-            <option *ngFor="let s of quantity_options" ngValue={{s}}>{{s}}
-            </option>
+        <select (change)="addQuantity($event)">
+            <option *ngFor="let quantity of quantity_options" [value]="quantity">{{quantity}}</option>
         </select>
-        <!-- <select [(ngModel)]="quantity" class="form-quantity">
-            <option *ngFor="let s of quantity_options" ngValue={{s}}>{{s}}
-            </option>
-        </select> -->
     </div>
     <br>
-    <!-- <button id="cart" (click)="itemAdded.emit(item)">Add to Cart</button> -->
     <button id="cart" (click)="addProductToCart(item)">Add to Cart</button>
 </div>

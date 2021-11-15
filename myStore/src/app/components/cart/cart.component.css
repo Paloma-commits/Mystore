@@ -12,7 +12,7 @@ img {
   flex-direction: column;
   margin-bottom: 20px;
   justify-content:space-around;
-  row-gap: 30px;
+  row-gap: 50px;
 }
 
 .cart-item-details {
@@ -41,6 +41,12 @@ img {
   margin-right: 50px;
   border-width: 10px;
   border-color: #5F9EA0;
+}
+
+h3{
+  align-self: center;
+  margin-bottom: 20px;
+  margin:auto;
 }
 
 .empty-cart-message {

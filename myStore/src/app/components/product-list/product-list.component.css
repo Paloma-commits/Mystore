@@ -6,7 +6,11 @@
     margin-bottom: 64px;
 }
   
-.product-container {
+.container {
     display: flex;
     justify-content: center;
+    flex-direction: row;
+    row-gap: 10px;
+    column-gap: 20px;
+    justify-content: space-evenly;
 }

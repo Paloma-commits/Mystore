@@ -11,6 +11,8 @@ export class CartSubItemComponent implements OnInit {
 
   @Input() prod: Item;
 
+  quantity: number = 1;
+
   constructor(private CartService: CartService) { 
     this.prod = {
       id: 0,
@@ -22,6 +24,7 @@ export class CartSubItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.quantity = this.prod.quantity;
   }
 
   remove(prod: Item){

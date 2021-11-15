@@ -15,7 +15,7 @@ export class ProductItemComponent implements OnInit {
 
   quantity: number = 0;
 
-  quantity_options = [1,2,3,4,5];
+  quantity_options = [0,1,2,3,4,5];
   
 
   constructor(private cartService: CartService) { 
@@ -34,15 +34,15 @@ export class ProductItemComponent implements OnInit {
    console.log(this.item.quantity)
   }
 
-
-  addProductToCart(item: Item): void {
-    this.cartService.addtoCart(this.item);
-    window.alert(`You just added our product: ${item.name} to your cart!`);
+  addQuantity(quant: any) {
+    this.quantity = quant.target.value;
+    //this.cartService.setQuantity(quant);
   }
 
-  addQuantity(quant: number): void{
-    this.item.quantity = quant
-
+  addProductToCart(item: Item): void {
+    this.item.quantity = Number(this.quantity);    
+    this.cartService.addtoCart(this.item);
+    //window.alert(`You just added our product: ${this.item.name} with quantity ${this.item.quantity} to your cart!`);
   }
 
 }

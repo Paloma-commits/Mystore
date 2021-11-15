@@ -9,6 +9,7 @@
 
     <div class="cart-item" *ngIf="cartList.length > 0">
         <app-cart-sub-item *ngFor="let prod of cartList" [prod]="prod"></app-cart-sub-item>
+        <h3>Total Price: ${{itemstotal}}</h3>
         <button (click)="checkout()">Continue to Check Out</button>
     </div>
 </div>

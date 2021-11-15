@@ -14,14 +14,7 @@ export class CartComponent implements OnInit {
 
   cartList: Item[] = []
 
-  name: string = "";
-  address: string = "";
-  cardnum: string = "";
-
-  currentOrder: Order = {
-    name: '',
-    price: 0
-  };
+  total = 0;
 
   constructor(private OrderService: OrderService, private router: Router, private CartService: CartService) { 
     
@@ -37,6 +30,4 @@ export class CartComponent implements OnInit {
     this.router.navigate(['cart/checkout']);
   }
   
-
-
 }

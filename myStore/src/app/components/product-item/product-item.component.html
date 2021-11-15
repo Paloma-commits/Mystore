@@ -1,15 +1,20 @@
 <div class='product-container'>
-    <a [routerLink]="['/product/', item.id, item.name]"><img class="product-image" src="assets/pictures/{{item.image}}" alt={{item.name}}></a>
-    <h3>{{ item.name }}</h3>
+    <a [routerLink]="['/product/', item.id, item.name]"><img class="product-image" src="assets/pictures/{{item.image}}"
+            alt={{item.name}}></a>
+    <h2>{{ item.name }}</h2>
     <h3>${{ item.price }}</h3>
-    <label for="quantity">Quantity</label>
-    <select id="quantity" name="quantity">
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-    </select>
+    <h4 style="color:#5F9EA0;">Select the quantity of this item</h4>
+    <div class="form-group">
+        <select (click)="addQuantity(quantity)">
+            <option *ngFor="let s of quantity_options" ngValue={{s}}>{{s}}
+            </option>
+        </select>
+        <!-- <select [(ngModel)]="quantity" class="form-quantity">
+            <option *ngFor="let s of quantity_options" ngValue={{s}}>{{s}}
+            </option>
+        </select> -->
+    </div>
     <br>
-    <button id="cart" (click)="addProductToCart()">Add to Cart</button>
+    <!-- <button id="cart" (click)="itemAdded.emit(item)">Add to Cart</button> -->
+    <button id="cart" (click)="addProductToCart(item)">Add to Cart</button>
 </div>
-
-

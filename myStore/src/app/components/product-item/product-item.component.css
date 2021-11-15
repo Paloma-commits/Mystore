@@ -12,6 +12,10 @@ image{
   height: 50px;
 
 }
+
+.form-quantity{
+  width: 50px
+}
   
 .product-container {
   margin-top: 64px;

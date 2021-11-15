@@ -10,7 +10,13 @@ import { Item } from '../../services/models/item';
 export class ProductItemComponent implements OnInit {
 
   @Input() item: Item;
-  @Output() itemAdded = new EventEmitter;
+  
+  //@Output() quantity = new EventEmitter();
+
+  quantity: number = 0;
+
+  quantity_options = [1,2,3,4,5];
+  
 
   constructor(private cartService: CartService) { 
     
@@ -25,12 +31,18 @@ export class ProductItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
-   
+   console.log(this.item.quantity)
   }
 
-  addProductToCart(): void {
+
+  addProductToCart(item: Item): void {
     this.cartService.addtoCart(this.item);
-    alert(`${this.item.name} was added to your cart`);
+    window.alert(`You just added our product: ${item.name} to your cart!`);
+  }
+
+  addQuantity(quant: number): void{
+    this.item.quantity = quant
+
   }
 
 }

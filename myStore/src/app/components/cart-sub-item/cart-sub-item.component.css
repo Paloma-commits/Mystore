@@ -1,0 +1,42 @@
+/* .checkout-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+} */
+
+.container{
+    display:flex;
+    flex-direction: row;
+    row-gap: 10px;
+    column-gap: 20px;
+    align-content: space-around;
+}
+
+.info-text{
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#button{
+    width: 80px;
+    align-self: center;
+    position: absolute;
+}
+
+#prod{
+    height: 150px;
+    width: 150px;
+}

@@ -1,3 +1,14 @@
 <a routerlink="/cart"></a>
+<h2>Here is what you got:</h2>
+<div class="cart-panel">
+    <div class="empty-cart-message" *ngIf="cartList.length == 0">
+        <h3><b>Oops! Your cart is empty</b></h3>
+        <br>
+        <img class="sadface" src="../../../assets/pictures/sad.jpg">
+    </div>
 
-<button (click)="checkout()">Check Out</button>
+    <div class="cart-item" *ngIf="cartList.length > 0">
+        <app-cart-sub-item *ngFor="let prod of cartList" [prod]="prod"></app-cart-sub-item>
+        <button (click)="checkout()">Continue to Check Out</button>
+    </div>
+</div>

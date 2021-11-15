@@ -9,8 +9,10 @@ img {
   
 .cart-item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 20px;
+  justify-content:space-around;
+  row-gap: 30px;
 }
 
 .cart-item-details {
@@ -37,33 +39,26 @@ img {
 .cart-panel {
   margin-left: 50px;
   margin-right: 50px;
+  border-width: 10px;
+  border-color: #5F9EA0;
 }
 
 .empty-cart-message {
   display: flex;
   justify-content: center;
   margin-top: 64px;
+  background-color: aliceblue;
 }
 
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
 
-input[type=submit] {
-  width: 50%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+h2{
+  align-self: center;
+  margin:auto;
+  display: grid;
+  justify-self: center;
+  color: #5F9EA0;
+  text-align:center;
+  margin-top: 20px;
 }
 
 button{
@@ -72,5 +67,15 @@ button{
   padding: 12px 20px;
   border-radius: 4px;
   color: white;
+  align-self: center;
+  margin:auto;
+  display: grid;
+  cursor: pointer;
+  width:max-content;
 }
 
+.sadface{
+  align-content: center;
+  position: absolute;
+  margin-top: 70px;
+}

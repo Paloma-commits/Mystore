@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
 import { Item } from '../../services/models/item';
 
@@ -36,13 +36,11 @@ export class ProductItemComponent implements OnInit {
 
   addQuantity(quant: any) {
     this.quantity = quant.target.value;
-    //this.cartService.setQuantity(quant);
   }
 
   addProductToCart(item: Item): void {
     this.item.quantity = Number(this.quantity);    
     this.cartService.addtoCart(this.item);
-    //window.alert(`You just added our product: ${this.item.name} with quantity ${this.item.quantity} to your cart!`);
   }
 
 }

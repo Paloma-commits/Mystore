@@ -14,8 +14,7 @@ export class ProductListComponent implements OnInit {
   items: Item[] = [];
 
   
-  constructor(private FetchItemservice: FetchItemsService,
-    private CartService: CartService) { }
+  constructor(private FetchItemservice: FetchItemsService) { }
 
   ngOnInit(): void {
   
@@ -25,9 +24,5 @@ export class ProductListComponent implements OnInit {
 
   }
 
-  // addProductToCart(item: Item) {
-  //   this.CartService.addtoCart(this.item);
-  //   window.alert(`You just added our product: ${item.name}!`);
-  // }
 
 }

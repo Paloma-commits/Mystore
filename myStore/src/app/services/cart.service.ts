@@ -9,11 +9,36 @@ export class CartService {
 
   cart_list: Item[] = [];
 
+  quantity: number = 0;
+
   constructor(private http: HttpClient) { }
 
   addtoCart(item: Item) {
-    this.cart_list.push(item);
-    return this.cart_list
+    if (item.quantity === 0  || item.quantity === undefined) {
+      alert("Looks like you did not select a quantity!")
+      return;
+    }
+    //check to see if it is already in cart
+    let itemIn = this.cart_list.filter(p => p.id === item.id);
+
+    if(itemIn.length !== 0){
+      let index = this.cart_list.findIndex(p => item.id === p.id);
+      //let currentQ = Number(this.cart_list[index].quantity);
+
+      let newQ = item.quantity;
+      
+      this.modifyQ(item.id, newQ);
+
+      alert('Item quantity in cart updated!')
+    }
+    else{
+      this.cart_list.push(item);
+      alert('Item added to cart')
+    }
+  }
+
+  getCart(){
+    return this.cart_list;
   }
 
   removeItem(item:Item):void {
@@ -32,4 +57,14 @@ export class CartService {
     }
     return total;
   }
+
+  setQuantity(quant: any){
+    this.quantity = Number(quant);
+  }
+
+  modifyQ(index: number, newQ: number){
+    let idx: number = this.cart_list.findIndex(p => p.id === index)
+    this.cart_list[idx].quantity = newQ;
+  }
+  
 }

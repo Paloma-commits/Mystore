@@ -13,7 +13,8 @@ export class FetchItemsService {
     image: '',
     name: '',
     price: 0,
-    quantity: 0
+    quantity: 0,
+    description: ''
   }
 
   private data: string = "../assets/data.json"

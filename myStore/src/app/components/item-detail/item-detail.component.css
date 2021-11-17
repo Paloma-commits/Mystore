@@ -22,9 +22,10 @@ img {
     margin-right: 128px;
     border: 5px solid #5F9EA0;
     background-color: azure;
-    height: 500px;
-    width:500px;
+    height: 800px;
+    width:1000px;
     border-radius: 10px;
+    font-weight: normal;
 }
 
 .product-image{
@@ -41,10 +42,11 @@ button{
     cursor: pointer;
     display: flex;
     align-self: center;
+    align-self: center;
     position:absolute; 
     margin-left:-50px;
     left:50%;
-    width:100px;
-    bottom:30px;
+    width: 100px;
+    padding: 10px;
 
 }

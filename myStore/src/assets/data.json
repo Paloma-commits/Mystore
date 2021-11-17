@@ -2,37 +2,43 @@
     {
         "id": 1,
         "image": "backpack.jpg",
-        "name": "backpack",
-        "price": 65
+        "name": "Backpack",
+        "price": 65,
+        "description": "This waterproof backpack gives you the greatest comfort with adjustable straps for both shoulders and waist!"
       },
       {
         "id": 2,
         "image": "headphones.jpg",
-        "name": "headphones",
-        "price": 359
+        "name": "Headphones",
+        "price": 359,
+        "description":"These headphones are equipped with Bluetooth and a cable option as well. Maximum comfort cmomparable to BOSE! "
       },
       {
         "id": 3,
         "image": "waterbottle.jpg",
-        "name": "waterbottle",
-        "price": 25.99
+        "name": "Waterbottle",
+        "price": 25.99,
+        "description": "Carry up to 24oz on the go and keep your drink cold!"
       },
       {
         "id": 4,
         "image": "sunglasses.jpg",
-        "name": "sunglasses",
-        "price": 140
+        "name": "Sunglasses",
+        "price": 140,
+        "description": "Polarized glasses that have an anti-fog shield to ensure a safe climb. Comes with a case"
       },
       {
         "id": 5,
         "image": "sunscreen.jpg",
-        "name": "sunscreen",
-        "price": 12
+        "name": "Sunscreen",
+        "price": 12,
+        "description": "Dermatologist approved sunscreen, safe for both adults and children. Apply every 3-4 hrs"
       },
       {
         "id": 6,
         "image": "watch.jpg",
-        "name": "watch",
-        "price": 200
+        "name": "Watch",
+        "price": 200,
+        "description":"Get all the data and fun with this sports watch! Allows resizing. Unisex."
       } 
 ]

@@ -19,6 +19,7 @@ export class ItemDetailComponent implements OnInit {
     image: "",
     price: 0,
     quantity: 1,
+    description: ''
   }
   queryString : string = '';
   image: string = '';

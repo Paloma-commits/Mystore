@@ -13,18 +13,22 @@ export class CartSubItemComponent implements OnInit {
 
   quantity: number = 1;
 
+  itemtotal:number = 0;
+
   constructor(private CartService: CartService) { 
     this.prod = {
       id: 0,
       image: '',
       name: '',
       price: 0,
-      quantity: 1
+      quantity: 1,
+      description: ''
     }
   }
 
   ngOnInit(): void {
     this.quantity = this.prod.quantity;
+    this.itemtotal = this.prod.quantity * this.prod.price;
   }
 
   remove(prod: Item){

@@ -10,7 +10,7 @@
 }
 
 button{
-    background-color: #45a049;
+    background-color: green;
     justify-content: center;
     padding: 12px 20px;
     border-radius: 4px;
@@ -33,3 +33,4 @@ input[type=text], select {
     box-sizing: border-box;
     background-color: #f2f2f2;
 }
+

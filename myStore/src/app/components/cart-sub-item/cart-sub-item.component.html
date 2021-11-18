@@ -4,7 +4,10 @@
     </div>
     <div class="info-text">
         <h4>{{prod.name}} for ${{prod.price}}</h4>
-        <h4>Quantity {{this.quantity}}</h4>
+        <h4>Current Quantity {{this.quantity}}</h4>
+        <h4>Modify Quantity <input type="number" name="newQ" [(ngModel)]="prod.quantity" 
+            (ngModelChange)=editQuantity($event) (click)="newQ.emit(prod)">
+        </h4>
         <h5>Total for this item: ${{itemtotal}} </h5>
     </div>
 </div>

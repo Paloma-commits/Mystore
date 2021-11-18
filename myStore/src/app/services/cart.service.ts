@@ -66,5 +66,13 @@ export class CartService {
     let idx: number = this.cart_list.findIndex(p => p.id === index)
     this.cart_list[idx].quantity = newQ;
   }
+
+  updateQ(q:number, prod_id: number){
+    let idx: number = this.cart_list.findIndex(p => p.id === prod_id);
+
+    if(q != 0){
+      this.cart_list[idx].quantity = q;
+    }
+  }
   
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
 import { Item } from 'src/app/services/models/item';
 
@@ -10,6 +10,7 @@ import { Item } from 'src/app/services/models/item';
 export class CartSubItemComponent implements OnInit {
 
   @Input() prod: Item;
+  @Output() newQ = new EventEmitter();
 
   quantity: number = 1;
 
@@ -33,6 +34,12 @@ export class CartSubItemComponent implements OnInit {
 
   remove(prod: Item){
     this.CartService.removeItem(this.prod)
+  }
+
+  editQuantity(q: number){
+    if(q > 0){
+      this.CartService.updateQ(q, this.prod.id)
+    }
   }
 
 }

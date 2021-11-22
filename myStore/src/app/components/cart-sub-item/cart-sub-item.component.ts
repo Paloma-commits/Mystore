@@ -37,9 +37,15 @@ export class CartSubItemComponent implements OnInit {
   }
 
   editQuantity(q: number){
+    if (q == 0) {
+      this.CartService.removeItem(this.prod);
+    }
+
     if(q > 0){
       this.CartService.updateQ(q, this.prod.id)
     }
+    this.quantity = q;
+    this.itemtotal = q * this.prod.price;
   }
 
 }

@@ -30,5 +30,9 @@ export class CartComponent implements OnInit {
   checkout() {
     this.router.navigate(['cart/checkout']);
   }
+
+  getNewItemsTotal() {
+    this.itemstotal = this.CartService.calculateTotalCart();
+  }
   
 }
